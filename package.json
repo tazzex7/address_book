@@ -1,0 +1,26 @@
+{
+  "name": "address_book",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tazzex7/address_book.git",
+  "author": "jonas <jonas.masharqa@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "babel-loader": "7",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "cucumber": "^5.1.0",
+    "puppeteer": "^1.19.0",
+    "superstatic": "^6.0.4",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
+  },
+  "scripts": {
+    "build": "webpack --progress --p --mode=production",
+    "watch": "webpack --progress --watch --mode=development",
+    "cucumber": "superstatic -p 3000 2> /dev/null & cucumber-js; lsof -ti tcp:3000 | xargs kill"
+  }
+}
