@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Address book application",
   "main": "src/app.js",
-  "repository": "https://github.com/DavveDavve/address_book",
-  "author": "David Izosimov david.izosimov@gmail.com",
+  "repository": "https://github.com/beccaburns/address_book.git",
+  "author": "Becca <beccaburns89@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.0",
