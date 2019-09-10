@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Address book</title>
+    <script src="./dist/bundle.js"></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
         <p>You have no contacts in your address book</p>
     </div>
 
-    <form action="#">
+    <form action="#" class="new-contact-form">
         <label for="name">Name</label>
         <input id="contact-name" name="name" type="text">
         <label for="email">Email</label>
@@ -30,9 +31,8 @@
         <label for="twitter">Twitter</label>
         <input id="contact-twitter" name="twitter" type="text">
         <input class="save-contact" type="submit" value="Save contact">
-        <input class="new-contact-form" type="submit" value="New Contact form">
     </form>
-    <script src="./dist/bundle.js"></script>
+   
 </body>
 
 </html>
