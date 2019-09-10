@@ -1,9 +1,10 @@
 {
   "name": "address_book",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/tazzex7/address_book.git",
-  "author": "jonas <jonas.masharqa@gmail.com>",
+  "description": "Address book application",
+  "main": "src/app.js",
+  "repository": "https://github.com/beccaburns/address_book.git",
+  "author": "Becca <beccaburns89@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.0",
