@@ -1,6 +1,6 @@
 const { setWorldConstructor } = require('cucumber')
 const { expect } = require ('chai')
-const puppeteer = require('puppeteer')
+const puppeteer = require ('puppeteer')
 
 const HOME_PAGE = 'http://localhost:3000'
 
@@ -19,7 +19,7 @@ class AddressBookWorld {
 
     async pageHasTextContent(expectedContent) {
         const pageContent = await this.page.content()
-        const actualContent = pageContent.match(expectedContent) [0]
+        const actualContent = pageContent.match(expectedContent)[0]
 
         expect(actualContent).to.be.eq(expectedContent)
     }
@@ -49,6 +49,13 @@ class AddressBookWorld {
                 throw `${btnName} button is not defined`
                 break
         }
+    }
+
+    async checkContactStorageCount(expectedCount) {
+        const actualCount = await this.page.evaluate(
+            () => JSON.parse(window.localStorage.getItem('contact')).length
+        )
+        expect(actualCount) == (expectedCount)
     }
 }
 
