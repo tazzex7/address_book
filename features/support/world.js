@@ -57,6 +57,13 @@ class AddressBookWorld {
         )
         expect(actualCount) == (expectedCount)
     }
+
+    async pageDoesNotHaveTextContent(unexpectedContent) {
+        const pageContent = await this.page.content()
+        let actualContent = pageContent.match(unexpectedContent)
+
+        expect(actualContent).to.be.eq(null)
+    }
 }
 
 setWorldConstructor(AddressBookWorld)
