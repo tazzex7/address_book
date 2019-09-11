@@ -1,7 +1,7 @@
-const renderContacts = () => {
 const storage = window.localStorage
-const contacts = JSON.parse(storage.getItem('contacts'))
 
+const renderContacts = () => {
+const contacts = JSON.parse(storage.getItem('contacts'))
 let div = document.querySelector('.contact-list')
 
 if (contacts) {
@@ -24,7 +24,7 @@ if (contacts) {
       </div>
       `
       ul.appendChild(li)
-
+  })
       div.appendChild(ul) 
   } else { 
     div.innerHTML = '<p>You have no contacts in your address book</p>' 
@@ -57,7 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         console.log(`Saving the following contact: ${JSON.stringify(contact)}`)
-        storage.setItem('contact', JSON.stringify(contact))
+        addContactForm.reset()
+        let contacts = JSON.parse(storage.getItem('contacts')) || []
+        contacts.push(contact)
+        storage.setItem('contacts', JSON.stringify(contacts))
         renderContacts()
+        // addContactForm.reset()
     })
 })
