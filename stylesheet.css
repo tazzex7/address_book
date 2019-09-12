@@ -1,0 +1,8 @@
+.contact-list >ul {
+    list-style-type: none;
+}
+
+body {
+    background-image: url("https://www.onlygfx.com/wp-content/uploads/2018/03/orange-polygonal-background-fade-3.png");
+    background-size: cover;
+}
