@@ -6,29 +6,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Address book</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
 
 <body>
     <h1>Contacts</h1>
     <div class="contact-list">
     </div>
-    <button class="add-contact">Add Contact</button>
-    <form class="new-contact-form" action="#">
-        <label for="name">Name</label>
-        <input id="contact-name" name="name" type="text">
-        <label for="email">Email</label>
-        <input id="contact-email" name="email" type="email">
-        <label for="phone">Phone</label>
-        <input id="contact-phone" name="phone" type="text">
-        <label for="company">Company</label>
-        <input id="contact-company" name="company" type="text">
-        <label for="notes">Notes</label>
-        <textarea id="contact-notes" name="notes" type="text"></textarea>
-        <label for="twitter">Twitter</label>
-        <input id="contact-twitter" name="twitter" type="text">
-        <input class="save-contact" type="submit" value="Save contact">
-    </form>
-    <script src="./dist/bundle.js"></script>
-</body>
+    <button class="ui basic button add-contact">
+      <i class="icon user"></i>Add Contact</button>
+      
+      <form class="new-contact-form ui form" action="#">
 
-</html>
+          <div class="field">
+              <label>Name</label>
+              <input type="text" name="name" id="contact-name">
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input type="email" name="email" id="contact-email">
+            </div>
+            <div class="field">
+              <label>Phone</label>
+              <input type="text" name="phone" id="contact-phone">
+            </div>
+            <div class="field">
+              <label>Company</label>
+              <input type="text" name="company" id="contact-company">
+            </div>
+            <div class="field">
+              <label>Notes</label>
+              <input type="text" name="notes" id="contact-notes">
+            </div>
+            <div class="field">
+              <label>Twitter</label>
+              <input type="text" name="twitter" id="contact-twitter">
+            </div>
+            <input class="ui button save-contact" type="submit" value="Save contact">
+          
+      </form>
+      <script src="./dist/bundle.js"></script>
+  </body>
+  
+  </html>
+
+
+
+  What's wrong with this code?
+      <!-- <label for="name">Name</label>
+          <input id="contact-name" name="name" type="text"> 
+          <label for="email">Email</label>
+          <input id="contact-email" name="email" type="email"> 
+          <label for="phone">Phone</label>
+          <input id="contact-phone" name="phone" type="text">
+          <label for="company">Company</label>
+          <input id="contact-company" name="company" type="text">
+          <label for="notes">Notes</label>
+          <textarea id="contact-notes" name="notes" type="text"></textarea>
+          <label for="twitter">Twitter</label>
+          <input id="contact-twitter" name="twitter" type="text">
+          <input class="save-contact" type="submit" value="Save contact">
+
+      
