@@ -8,21 +8,25 @@ if (contacts) {
   div.innerHTML = ''
   const ul = document.createElement('ul')
   contacts.forEach(contact => {
-    let li = document.createElement('li')
+    let li = document.createElement('div')
     li.innerHTML = `
-      <div class="card">
-        <div class="image">
-          <img src="https://ca-address-book.herokuapp.com/images/pine.jpg" />
+        <div class="ui three stackable cards">
+        <div class="card">
+          <div class="image">
+            <img src="https://semantic-ui.com/images/avatar/large/elliot.jpg">
+          </div>
         </div>
+      </div>
         <div class="content">
-          <h1>${ contact.name }</h1>
-          <h2>${ contact.company }</h2>
-          <p>${ contact.notes }</p> 
-          ${ contact.email } | 
-          <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
+          <h2>${ contact.name }</h2>
+          <li>${ contact.company }</li>
+          <li>${ contact.email }</li> 
+          <li>${ contact.notes }</li>
+          <li><a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a><img src="https://www.shareicon.net/data/128x128/2017/06/22/887584_logo_512x512.png" height="25" width="25"></li>
         </div>
       </div>
       `
+     
       ul.appendChild(li)
   })
       div.appendChild(ul) 

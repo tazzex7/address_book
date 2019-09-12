@@ -10,14 +10,15 @@
 </head>
 
 <body>
-    <h1>Contacts</h1>
+    <div class="ui raised very padded text container segment">
+      <h1 class="ui header"><center>Contacts</center></h1>
+
     <div class="contact-list">
     </div>
     <button class="ui basic button add-contact">
       <i class="icon user"></i>Add Contact</button>
       
       <form class="new-contact-form ui form" action="#">
-
           <div class="field">
               <label>Name</label>
               <input type="text" name="name" id="contact-name">
@@ -45,26 +46,8 @@
             <input class="ui button save-contact" type="submit" value="Save contact">
           
       </form>
+      
       <script src="./dist/bundle.js"></script>
   </body>
   
   </html>
-
-
-
-  What's wrong with this code?
-      <!-- <label for="name">Name</label>
-          <input id="contact-name" name="name" type="text"> 
-          <label for="email">Email</label>
-          <input id="contact-email" name="email" type="email"> 
-          <label for="phone">Phone</label>
-          <input id="contact-phone" name="phone" type="text">
-          <label for="company">Company</label>
-          <input id="contact-company" name="company" type="text">
-          <label for="notes">Notes</label>
-          <textarea id="contact-notes" name="notes" type="text"></textarea>
-          <label for="twitter">Twitter</label>
-          <input id="contact-twitter" name="twitter" type="text">
-          <input class="save-contact" type="submit" value="Save contact">
-
-      
