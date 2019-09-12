@@ -9,27 +9,31 @@ if (contacts) {
   const ul = document.createElement('ul')
   contacts.forEach(contact => {
     let li = document.createElement('div')
-    li.innerHTML = `
-        <div class="ui three stackable cards">
-        <div class="card">
+    li.innerHTML = `  
+    <div class="ui column">
+        <div class="ui card">
           <div class="image">
             <img src="https://semantic-ui.com/images/avatar/large/elliot.jpg">
           </div>
-        </div>
-      </div>
-        <div class="content">
-          <h2>${ contact.name }</h2>
-          <li>${ contact.company }</li>
-          <li>${ contact.email }</li> 
-          <li>${ contact.notes }</li>
-          <li><a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a><img src="https://www.shareicon.net/data/128x128/2017/06/22/887584_logo_512x512.png" height="25" width="25"></li>
-        </div>
-      </div>
-      `
+            <div class="content">
+                <div class="header">
+                ${ contact.name }
+                </div>
+                <div class="description"> 
+                    ${ contact.notes } <br>
+                    ${ contact.email } <br>
+                    ${ contact.company }
+                </div>
+                <div class="extra content">
+                    <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a><img src="https://www.shareicon.net/data/128x128/2017/06/22/887584_logo_512x512.png" height="25" width="25">
+                </div>
+            </div>
+    </div>
+        `
      
-      ul.appendChild(li)
+      div.appendChild(li)
   })
-      div.appendChild(ul) 
+      li.appendChild(ul) 
   } else { 
     div.innerHTML = '<p>You have no contacts in your address book</p>' 
   }
