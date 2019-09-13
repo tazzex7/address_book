@@ -28,6 +28,7 @@ if (contacts) {
                     <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a><img src="https://www.shareicon.net/data/128x128/2017/06/22/887584_logo_512x512.png" height="25" width="25">
                 </div>
             </div>
+            <button onClick="var c = JSON.parse(localStorage.getItem('contacts')); c.forEach((item, index, array) => item.id === ${contact.id} && array.splice(index, 1) ); localStorage.setItem('contacts', JSON.stringify(c)); window.location.reload()" class="delete-contact">Delete contact</button>   
     </div>
         `
      
@@ -70,6 +71,5 @@ document.addEventListener('DOMContentLoaded', () => {
         contacts.push(contact)
         storage.setItem('contacts', JSON.stringify(contacts))
         renderContacts()
-        // addContactForm.reset()
     })
 })
