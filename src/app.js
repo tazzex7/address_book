@@ -28,6 +28,7 @@ if (contacts) {
                     <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a><img src="https://www.shareicon.net/data/128x128/2017/06/22/887584_logo_512x512.png" height="25" width="25">
                 </div>
             </div>
+            <button onClick="this.parentNode.parentNode.removeChild(this.parentNode);">Delete Contact</button>   
     </div>
         `
      
